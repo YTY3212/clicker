@@ -1,0 +1,39 @@
+<p>кликер от шаркобатона</p>
+<script>
+    let klikov = 0;
+    let dvaxbust = 0;
+
+    function kliki() {
+        if (dvaxbust === 1)
+            klikov = klikov + 2;
+        else {
+            klikov = klikov + 1;
+         }
+        document.getElementById('1').textContent = klikov;
+        if (klikov === 20) {
+            alert("ты мастер");
+        }
+        else if (klikov === 50) {
+            alert("ты про");
+        }
+        else if (klikov === 100) {
+            alert("ты хакер");
+
+        }
+    }
+
+    function dvaaxbust() {
+        if (klikov >= 50) {
+            klikov = klikov - 50;
+            dvaxbust = dvaxbust + 1;
+            alert("вы купили 2x буст");
+            Object.freeze(dvaxbust);
+        }  else  {
+            alert("хуй те а не 2x буст денег нету у тя");
+        }
+    }
+
+</script>
+<p id=1></p>
+<button onclick="kliki();">клик</button>
+<button onclick="dvaaxbust();">
